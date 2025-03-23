@@ -27,13 +27,12 @@
             background: white;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
+            animation: fadeIn 1.5s ease-in-out;
             position: relative;
-            transform-origin: left;
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: transform 1s;
         }
-        .container:hover {
-            transform: perspective(1000px) rotateY(0deg);
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         header h1 {
             font-size: 32px;
@@ -43,10 +42,6 @@
         .story {
             text-align: left;
             margin: 20px 0;
-            padding: 20px;
-            border-radius: 10px;
-            background: #f9f9f9;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         .story h2 {
             font-size: 24px;
@@ -56,6 +51,11 @@
         .story p {
             font-size: 18px;
             line-height: 1.8;
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
         }
         .hearts {
             position: absolute;
@@ -92,20 +92,30 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container animate__animated animate__fadeIn">
         <header>
             <h1>Kisah Cinta Handika & Denia</h1>
         </header>
         <div class="hearts"></div>
         
         <section class="story">
+            <h2>Awal Pertemuan</h2>
+            <p>Handika pertama kali bertemu Denia saat acara sekolah. Awalnya hanya sebatas teman, tetapi semakin lama mereka semakin dekat. Denia dikenal sebagai sosok yang ceria dan penuh semangat, sementara Handika adalah pribadi yang lebih tenang dan pemikir. Meskipun berbeda, mereka merasa nyaman satu sama lain.</p>
+        </section>
+
+        <section class="story">
             <h2>Denia Rela Berubah Demi Handika</h2>
             <p>Dalam perjalanan cinta mereka, Denia menunjukkan cinta dan kesetiaannya yang luar biasa. Dia rela masuk Kristen demi Handika, sebagai bukti cinta sejatinya. Keputusan ini bukan hal yang mudah, tetapi Denia melakukannya dengan penuh keyakinan karena dia ingin selalu bersama Handika dalam satu jalan iman.</p>
         </section>
         
         <section class="story">
+            <h2>Perjalanan Bersama</h2>
+            <p>Hubungan mereka diuji dengan berbagai tantangan. Terkadang perbedaan pendapat muncul, tetapi mereka selalu menemukan cara untuk memahami satu sama lain. Denia yang cerewet dan terkadang marah sebenarnya sangat peduli dengan Handika, dan Handika mulai menyadari bahwa itulah cara Denia menunjukkan kasih sayangnya.</p>
+        </section>
+        
+        <section class="story">
             <h2>Menatap Masa Depan</h2>
-            <p>Denia selalu berada di sisi Handika, memberikan dukungan yang luar biasa. Mereka merencanakan masa depan bersama, ingin menikah di usia 25 tahun dan membangun keluarga yang harmonis.</p>
+            <p>Denia selalu berada di sisi Handika, memberikan dukungan yang luar biasa. Meski ada perbedaan dalam perjalanan hidup mereka, Denia tetap setia dan menerima Handika apa adanya. Mereka merencanakan masa depan bersama, ingin menikah di usia 25 tahun dan membangun keluarga yang harmonis.</p>
         </section>
         
         <section class="story">
