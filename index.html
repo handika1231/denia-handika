@@ -14,7 +14,7 @@
         }
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
             color: #333;
             text-align: center;
             overflow-x: hidden;
@@ -27,8 +27,14 @@
             background: white;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
-            animation: fadeIn 1.5s ease-in-out;
             position: relative;
+            transform-origin: left;
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 1s;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .container:hover {
+            transform: perspective(1000px) rotateY(0deg);
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(30px); }
@@ -36,21 +42,22 @@
         }
         header h1 {
             font-size: 32px;
-            color: #007bb5;
+            color: #ff4081;
             margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
         .story {
             text-align: left;
             margin: 20px 0;
-        }
-        .story h2 {
-            font-size: 24px;
-            color: #007bb5;
-            margin-bottom: 10px;
-        }
-        .story p {
-            font-size: 18px;
-            line-height: 1.8;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff0f6;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             animation: slideIn 1s ease-in-out;
         }
         @keyframes slideIn {
@@ -85,9 +92,10 @@
         footer {
             margin-top: 20px;
             padding: 10px;
-            background: #007bb5;
+            background: #ff4081;
             color: white;
             border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
         }
     </style>
 </head>
